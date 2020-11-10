@@ -1,15 +1,16 @@
-# MacCoffee - Android Quiz Game
+# maccoffee
 
-MacCoffee merupakan game online berbasis mobile yang bergerak di bidang edukasi jenis dan pengolahan biji kopi. Game ini bertujuan untuk membantu konsumen Macro Coffee agar lebih mengetahui terhadap jenis biji kopi serta proses raosting dari biji kopi hingga kopi siap di minum. Dengan adanya tujuan tersebut diharapkan agar konsumen dapat mengetahui serta menikmati lebih banyak jenis kopi dari sebelumnya.
+A new Flutter application.
 
-Aplikasi ini berbasis android dan dibangun menggunakan Bahasa Pemrograman Dart dan Framework Flutter.
+## Getting Started
 
-____________________________________________________________
-# Kelompok D - Kelas PPL D
+This project is a starting point for a Flutter application.
 
-Anggota :
-- Virgiawan Indrianto (Project Manager)
-- Dinda Dikirima (Analyst)
-- Irsyadul Anam (Designer)
-- Aldi Milansyah Putra (Programmer)
-- Fista Yudhistira (Tester)
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
