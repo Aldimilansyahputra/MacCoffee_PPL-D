@@ -13,6 +13,7 @@ void main(){
       "/" : (context) => LauncherPage(),
       LoginPage.routeName : (context) => LoginPage(),
       RegisterPage.routeName : (context) => RegisterPage(),
+      HomePage.routeName : (context) => HomePage(),
     },
   ));
 }

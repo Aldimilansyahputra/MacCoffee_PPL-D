@@ -10,19 +10,17 @@ class HomeAppBar extends AppBar {
       flexibleSpace: _buildHomeAppBar());
 
   static Widget _buildHomeAppBar() {
-    return new Container(
+    return Container(
       padding: EdgeInsets.only(left: 16.0, right: 16.0),
-      child: new Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          new Image.asset(
+          Image.asset(
             "assets/images/logo.png",
             height: 50.0,
             width: 50.0,
           ),
-          new Text(
-            "Login",
-          )
+
           ]
       )
     );
