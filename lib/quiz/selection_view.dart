@@ -42,7 +42,7 @@ Widget _buildOne(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Level 1',
           style: TextStyle(
@@ -64,7 +64,7 @@ Widget _buildTwo(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Level 2',
           style: TextStyle(
@@ -86,7 +86,7 @@ Widget _buildThree(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Level 3',
           style: TextStyle(

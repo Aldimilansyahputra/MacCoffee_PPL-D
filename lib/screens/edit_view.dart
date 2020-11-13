@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:maccoffee/constants.dart';
 
-class RegisterPage extends StatefulWidget {
-  static const routeName = "/RegisterPage";
+
+class EditPage extends StatefulWidget {
+  static const routeName = "/EditPage";
+
   @override
-  _RegisterPageState createState() => _RegisterPageState();
+  _EditPageState createState() => _EditPageState();
 }
-class _RegisterPageState extends State<RegisterPage> {
+
+class _EditPageState extends State<EditPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +18,7 @@ class _RegisterPageState extends State<RegisterPage> {
         padding: EdgeInsets.all(20.0),
         child: ListView(
           children: <Widget>[
-            _iconRegistrasi(),
-            _titleDescription(),
+            _iconEdit(),
             _textField(),
             _buildButton(context),
           ],
@@ -25,40 +27,14 @@ class _RegisterPageState extends State<RegisterPage> {
     );
   }
 }
-Widget _iconRegistrasi() {
+Widget _iconEdit() {
   return Image.asset(
     "assets/images/logo.png",
     width: 150.0,
     height: 150.0,
   );
 }
-Widget _titleDescription() {
-  return Column(
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-      Text(
-        "Registrasi",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 16.0,
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.only(top: 12.0),
-      ),
-      Text(
-        "Registrasi dan mulailah memburu hadiah!",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 12.0,
-        ),
-        textAlign: TextAlign.center,
-      ),
-    ],
-  );
-}
+
 Widget _textField() {
   return Column(
     children: <Widget>[
@@ -203,7 +179,7 @@ Widget _buildButton(BuildContext context) {
           padding: EdgeInsets.symmetric(vertical: 8.0),
           width: double.infinity,
           child: Text(
-            'Registrasi',
+            'Simpan',
             style: TextStyle(color: ColorPalette.primaryColor),
             textAlign: TextAlign.center,
           ),
@@ -213,25 +189,6 @@ Widget _buildButton(BuildContext context) {
           ),
         ),
       ),
-      Padding(
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-      Text(
-        'or',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 12.0,
-        ),
-      ),
-      FlatButton(
-        child: Text(
-          'Login',
-          style: TextStyle(color: Colors.white),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, "/");
-        },
-      )
     ],
   );
 }

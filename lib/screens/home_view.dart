@@ -3,6 +3,7 @@ import 'package:maccoffee/constants.dart';
 import 'package:maccoffee/appbar/home_appbar.dart';
 import 'package:maccoffee/quiz/selection_view.dart';
 import 'package:maccoffee/screens/login_view.dart';
+import 'package:maccoffee/screens/edit_view.dart';
 
 class HomePage extends StatelessWidget {
   static const routeName = "/HomePage";
@@ -23,6 +24,7 @@ class HomePage extends StatelessWidget {
                   _buildGame(context),
                   _buildTrivia(context),
                   _buildReward(context),
+                  _buildEdit(context),
                 ],
               ),
             ),
@@ -50,8 +52,7 @@ Widget _buildButton(BuildContext context) {
       Padding(
         padding: EdgeInsets.only(top: 16.0),
       ),
-
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Login',
           style: TextStyle(
@@ -73,7 +74,7 @@ Widget _buildGame(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Game Quiz',
           style: TextStyle(
@@ -96,7 +97,7 @@ Widget _buildTrivia(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Trivia',
           style: TextStyle(
@@ -118,7 +119,7 @@ Widget _buildReward(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      FlatButton(
+      RaisedButton(
         child: Text(
           'Point & Reward',
           style: TextStyle(
@@ -126,6 +127,30 @@ Widget _buildReward(BuildContext context) {
           ),
         ),
         onPressed: () {
+
+        },
+      )
+    ],
+  );
+}
+
+
+Widget _buildEdit(BuildContext context) {
+  return Column(
+    children: <Widget>[
+      Padding(
+        padding: EdgeInsets.only(bottom: 10.0),
+      ),
+
+      FlatButton(
+        child: Text(
+          'Halaman Akun',
+          style: TextStyle(
+            color: ColorPalette.primaryColor,
+          ),
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, EditPage.routeName);
 
         },
       )

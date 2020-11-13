@@ -6,6 +6,7 @@ import 'package:maccoffee/quiz/selection_view.dart';
 import 'package:maccoffee/screens/home_view.dart';
 import 'package:maccoffee/screens/login_view.dart';
 import 'package:maccoffee/screens/register_view.dart';
+import 'package:maccoffee/screens/edit_view.dart';
 import 'package:maccoffee/launcher/launcher_view.dart';
 
 void main(){
@@ -17,6 +18,7 @@ void main(){
       "/" : (context) => LauncherPage(),
       LoginPage.routeName : (context) => LoginPage(),
       RegisterPage.routeName : (context) => RegisterPage(),
+      EditPage.routeName : (context) => EditPage(),
       HomePage.routeName : (context) => HomePage(),
       SelectionPage.routeName : (context) => SelectionPage(),
       QuizOne.routeName : (context) => QuizOne(),
