@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:maccoffee/constants.dart';
-import 'package:maccoffee/appbar/home_appbar.dart';
 import 'package:maccoffee/quiz/selection_view.dart';
 import 'package:maccoffee/screens/login_view.dart';
 import 'package:maccoffee/screens/edit_view.dart';
@@ -13,7 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         color: Colors.white,
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.only(left: 40.0, top: 20.0, bottom: 20.0, right: 40.0),
         child: ListView(
           children: <Widget>[
             Center(

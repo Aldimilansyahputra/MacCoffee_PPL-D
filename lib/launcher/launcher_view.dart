@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:maccoffee/screens/login_view.dart';
+import 'package:maccoffee/admins/home_view.dart';
 import 'package:maccoffee/screens/home_view.dart';
 import 'package:maccoffee/constants.dart';
 
@@ -44,7 +45,7 @@ class _LauncherPageState extends State<LauncherPage> {
     var duration = const Duration(seconds: 2);
     return new Timer(duration, () {
       Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (_) {
-        return new HomePage();
+        return new AdminHomepage();
       }));
     });
   }
