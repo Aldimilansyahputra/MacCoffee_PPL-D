@@ -17,12 +17,13 @@ class SelectionPage extends StatelessWidget {
       home: new Scaffold(
         appBar: new AppBar(
           title: new Text('Quiz Selection'),
-          backgroundColor: ColorPalette.primaryColor,
+          backgroundColor: Color(0xFFF57F17),
         ),
 
         body: new Center(
           child: new Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
             children: <Widget>[
               _buildOne(context),
               _buildTwo(context),
@@ -42,15 +43,15 @@ Widget _buildOne(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      RaisedButton(
-        child: Text(
-          'Level 1',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
+      IconButton(
+        icon: Image.asset(
+            "assets/images/lv1.png"
         ),
+        iconSize: 100,
         onPressed: () {
-          Navigator.pushNamed(context, QuizOne.routeName);
+          Navigator.of(context).push(MaterialPageRoute(builder: (c){
+            return QuizOne();
+          },),);
         },
       )
     ],
@@ -64,15 +65,15 @@ Widget _buildTwo(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      RaisedButton(
-        child: Text(
-          'Level 2',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
+      IconButton(
+        icon: Image.asset(
+            "assets/images/lv2.png"
         ),
+        iconSize: 100,
         onPressed: () {
-          Navigator.pushNamed(context, QuizTwo.routeName);
+          Navigator.of(context).push(MaterialPageRoute(builder: (c){
+            return QuizTwo();
+          },),);
         },
       )
     ],
@@ -86,17 +87,18 @@ Widget _buildThree(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
 
-      RaisedButton(
-        child: Text(
-          'Level 3',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
+      IconButton(
+        icon: Image.asset(
+            "assets/images/lv3.png"
         ),
+        iconSize: 100,
         onPressed: () {
-          Navigator.pushNamed(context, QuizThree.routeName);
+          Navigator.of(context).push(MaterialPageRoute(builder: (c){
+            return QuizThree();
+          },),);
         },
       )
     ],
   );
 }
+

@@ -118,7 +118,7 @@ class _QuizThree extends State<QuizThree> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorPalette.primaryColor,
+        backgroundColor: Color(0xFFF57F17),
       ),
 
       body: new ListView(

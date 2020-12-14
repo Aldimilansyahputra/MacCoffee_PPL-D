@@ -3,6 +3,8 @@ import 'package:maccoffee/constants.dart';
 import 'package:maccoffee/quiz/selection_view.dart';
 import 'package:maccoffee/screens/login_view.dart';
 import 'package:maccoffee/screens/edit_view.dart';
+import 'package:maccoffee/screens/reward_view.dart';
+import 'package:maccoffee/screens/trivia_view.dart';
 
 class HomePage extends StatelessWidget {
   static const routeName = "/HomePage";
@@ -11,148 +13,83 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
-        padding: EdgeInsets.only(left: 40.0, top: 20.0, bottom: 20.0, right: 40.0),
-        child: ListView(
+        decoration: BoxDecoration(
+        image : DecorationImage(
+          image : AssetImage('assets/images/main_bg1.png'),
+          fit: BoxFit.cover,
+        ),
+        ),
+        child: Column(
           children: <Widget>[
-            Center(
-              child: Column(
-                children: <Widget>[
-                  _iconLogin(),
-                  _buildButton(context),
-                  _buildGame(context),
-                  _buildTrivia(context),
-                  _buildReward(context),
-                  _buildEdit(context),
-                ],
-              ),
+            SizedBox(
+              height: 100.0,
+              width: 800.0,
+              child: IconButton(
+              icon: Image.asset("assets/images/login_btn.png"),
+              padding: EdgeInsets.only(left: 20.0,top: 50.0,right: 20.0,bottom: 20.0),
+              iconSize: 100,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c){
+                  return LoginPage();
+                },),);
+              },
             ),
+            ),
+
+            SizedBox(
+                height: 100.0,
+                width: 800.0,
+              child: IconButton(
+              icon: Image.asset("assets/images/quiz_btn.png"),
+              iconSize: 100,
+                padding: EdgeInsets.all(20.0),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c){
+                  return SelectionPage();
+                },),);
+              },
+            ),
+              ),
+
+            SizedBox(
+              height: 100.0,
+              width: 800.0,
+            child: IconButton(
+              icon: Image.asset(
+                  "assets/images/trivia_btn.png"
+              ),
+              iconSize: 100,
+              padding: EdgeInsets.all(20.0),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c){
+                  return TriviaPage();
+                },),);
+              },
+            ),
+            ),
+
+            SizedBox(
+              height: 100.0,
+              width: 800.0,
+              child: IconButton(
+              icon: Image.asset(
+                  "assets/images/reward_btn.png"
+              ),
+              iconSize: 100,
+                padding: EdgeInsets.all(20.0),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c){
+                  return RewardPage();
+                },),);
+              },
+            ),
+            ),
+
           ],
         ),
+
+
       ),
     );
   }
-}
-
-Widget _iconLogin() {
-  return Image.asset(
-    "assets/images/logo.png",
-    height: 150.0,
-    width: 150.0,
-    color: ColorPalette.primaryColor,
-  );
-}
-
-
-
-Widget _buildButton(BuildContext context) {
-  return Column(
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-      RaisedButton(
-        child: Text(
-          'Login',
-          style: TextStyle(
-              color: ColorPalette.primaryColor,
-          ),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, LoginPage.routeName);
-        },
-      )
-    ],
-  );
-}
-
-Widget _buildGame(BuildContext context) {
-  return Column(
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-
-      RaisedButton(
-        child: Text(
-          'Game Quiz',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, SelectionPage.routeName);
-
-        },
-      )
-    ],
-  );
-}
-
-Widget _buildTrivia(BuildContext context) {
-  return Column(
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-
-      RaisedButton(
-        child: Text(
-          'Trivia',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
-        ),
-        onPressed: () {
-
-        },
-      )
-    ],
-  );
-}
-
-Widget _buildReward(BuildContext context) {
-  return Column(
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-
-      RaisedButton(
-        child: Text(
-          'Point & Reward',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
-        ),
-        onPressed: () {
-
-        },
-      )
-    ],
-  );
-}
-
-
-Widget _buildEdit(BuildContext context) {
-  return Column(
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.only(bottom: 10.0),
-      ),
-
-      FlatButton(
-        child: Text(
-          'Halaman Akun',
-          style: TextStyle(
-            color: ColorPalette.primaryColor,
-          ),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, EditPage.routeName);
-
-        },
-      )
-    ],
-  );
 }

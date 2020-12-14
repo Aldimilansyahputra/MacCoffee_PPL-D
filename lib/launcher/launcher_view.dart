@@ -4,6 +4,7 @@ import 'package:maccoffee/screens/login_view.dart';
 import 'package:maccoffee/admins/home_view.dart';
 import 'package:maccoffee/screens/home_view.dart';
 import 'package:maccoffee/constants.dart';
+import 'package:maccoffee/screenslog/selection_view.dart';
 
 
 class LauncherPage extends StatefulWidget {
@@ -45,7 +46,7 @@ class _LauncherPageState extends State<LauncherPage> {
     var duration = const Duration(seconds: 2);
     return new Timer(duration, () {
       Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (_) {
-        return new AdminHomepage();
+        return new HomePage();
       }));
     });
   }
@@ -53,18 +54,13 @@ class _LauncherPageState extends State<LauncherPage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: ColorPalette.primaryColor,
-      body: Center(
-        child: Image.asset(
-          "assets/images/logo.png",
-          height: 100.0,
-          width: 400.0,
-        ),
-
-      ),
+        body: Container(
+        decoration: BoxDecoration(
+        image: DecorationImage(
+        image: AssetImage("assets/images/splash_bg.png"),
+    fit: BoxFit.cover,
+    ),),),
     );
   }
-
-
 
 }

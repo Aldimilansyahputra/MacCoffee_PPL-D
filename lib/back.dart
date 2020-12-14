@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:maccoffee/constants.dart';
+import 'package:maccoffee/screens/register_view.dart';
 
-class RegisterPage extends StatefulWidget {
-  static const routeName = "/RegisterPage";
-  @override
-  _RegisterPageState createState() => _RegisterPageState();
-}
-class _RegisterPageState extends State<RegisterPage> {
+
+
+
+
+class LoginPage extends StatelessWidget {
+  static const routeName = "/LoginPage";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,21 +16,27 @@ class _RegisterPageState extends State<RegisterPage> {
         padding: EdgeInsets.all(20.0),
         child: ListView(
           children: <Widget>[
-            _iconRegistrasi(),
-            _titleDescription(),
-            _textField(),
-            _buildButton(context),
+            Center(
+              child: Column(
+                children: <Widget>[
+                  _iconLogin(),
+                  _titleDescription(),
+                  _textField(),
+                  _buildButton(context),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-Widget _iconRegistrasi() {
+Widget _iconLogin() {
   return Image.asset(
     "assets/images/logo.png",
-    width: 150.0,
     height: 150.0,
+    width: 150.0,
   );
 }
 Widget _titleDescription() {
@@ -39,7 +46,7 @@ Widget _titleDescription() {
         padding: EdgeInsets.only(top: 16.0),
       ),
       Text(
-        "Registrasi",
+        "Login MacCoffee",
         style: TextStyle(
           color: Colors.white,
           fontSize: 16.0,
@@ -49,10 +56,10 @@ Widget _titleDescription() {
         padding: EdgeInsets.only(top: 12.0),
       ),
       Text(
-        "Registrasi dan mulailah memburu hadiah!",
+        "Dan dapatkan voucher dan hadiah lainnya!",
         style: TextStyle(
-          color: Colors.white,
           fontSize: 12.0,
+          color: Colors.white,
         ),
         textAlign: TextAlign.center,
       ),
@@ -62,33 +69,6 @@ Widget _titleDescription() {
 Widget _textField() {
   return Column(
     children: <Widget>[
-
-      Padding(
-        padding: EdgeInsets.only(top: 12.0),
-      ),
-      TextFormField(
-        decoration: const InputDecoration(
-          border: UnderlineInputBorder(),
-          enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 3.0,
-            ),
-          ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 3.0,
-            ),
-          ),
-          hintText: "Nama Lengkap",
-          hintStyle: TextStyle(color: ColorPalette.hintColor),
-        ),
-        style: TextStyle(color: Colors.white),
-        autofocus: false,
-      ),
-
-
       Padding(
         padding: EdgeInsets.only(top: 12.0),
       ),
@@ -113,7 +93,6 @@ Widget _textField() {
         style: TextStyle(color: Colors.white),
         autofocus: false,
       ),
-
       Padding(
         padding: EdgeInsets.only(top: 12.0),
       ),
@@ -123,57 +102,7 @@ Widget _textField() {
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
               color: Colors.white,
-              width: 3.0,
-            ),
-          ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 3.0,
-            ),
-          ),
-          hintText: "Nomor Telpon",
-          hintStyle: TextStyle(color: ColorPalette.hintColor),
-        ),
-        style: TextStyle(color: Colors.white),
-        autofocus: false,
-      ),
-
-      Padding(
-        padding: EdgeInsets.only(top: 12.0),
-      ),
-      TextFormField(
-        decoration: const InputDecoration(
-          border: UnderlineInputBorder(),
-          enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 3.0,
-            ),
-          ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 3.0,
-            ),
-          ),
-          hintText: "Email",
-          hintStyle: TextStyle(color: ColorPalette.hintColor),
-        ),
-        style: TextStyle(color: Colors.white),
-        autofocus: false,
-      ),
-
-      Padding(
-        padding: EdgeInsets.only(top: 12.0),
-      ),
-      TextFormField(
-        decoration: const InputDecoration(
-          border: UnderlineInputBorder(),
-          enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 3.0,
+              width: 1.5,
             ),
           ),
           focusedBorder: UnderlineInputBorder(
@@ -192,7 +121,7 @@ Widget _textField() {
     ],
   );
 }
-Widget _buildButton(BuildContext context) {
+Widget _buildButton(BuildContext) {
   return Column(
     children: <Widget>[
       Padding(
@@ -203,7 +132,7 @@ Widget _buildButton(BuildContext context) {
           padding: EdgeInsets.symmetric(vertical: 8.0),
           width: double.infinity,
           child: Text(
-            'Registrasi',
+            'Login',
             style: TextStyle(color: Color(0xFFF57F17),),
             textAlign: TextAlign.center,
           ),
@@ -225,13 +154,13 @@ Widget _buildButton(BuildContext context) {
       ),
       FlatButton(
         child: Text(
-          'Login',
+          'Register',
           style: TextStyle(color: Colors.white),
         ),
         onPressed: () {
-          Navigator.pushNamed(context, "/");
+          Navigator.pushNamed(BuildContext, RegisterPage.routeName);
         },
-      )
+      ),
     ],
   );
 }

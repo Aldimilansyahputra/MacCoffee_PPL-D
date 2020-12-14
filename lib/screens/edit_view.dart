@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maccoffee/constants.dart';
+import 'package:maccoffee/screens/home_view.dart';
 
 
 class EditPage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _EditPageState extends State<EditPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: ColorPalette.primaryColor,
+        color: Color(0xFFF57F17),
         padding: EdgeInsets.all(20.0),
         child: ListView(
           children: <Widget>[
@@ -47,7 +48,7 @@ Widget _textField() {
           border: UnderlineInputBorder(),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: ColorPalette.underlineTextField,
+              color: Color(0xFFF57F17),
               width: 3.0,
             ),
           ),
@@ -73,7 +74,7 @@ Widget _textField() {
           border: UnderlineInputBorder(),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: ColorPalette.underlineTextField,
+              color: Color(0xFFF57F17),
               width: 1.5,
             ),
           ),
@@ -98,7 +99,7 @@ Widget _textField() {
           border: UnderlineInputBorder(),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: ColorPalette.underlineTextField,
+              color: Color(0xFFF57F17),
               width: 3.0,
             ),
           ),
@@ -123,7 +124,7 @@ Widget _textField() {
           border: UnderlineInputBorder(),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: ColorPalette.underlineTextField,
+              color: Color(0xFFF57F17),
               width: 3.0,
             ),
           ),
@@ -148,7 +149,7 @@ Widget _textField() {
           border: UnderlineInputBorder(),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: ColorPalette.underlineTextField,
+              color: Color(0xFFF57F17),
               width: 3.0,
             ),
           ),
@@ -175,12 +176,19 @@ Widget _buildButton(BuildContext context) {
         padding: EdgeInsets.only(top: 16.0),
       ),
       InkWell(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (c){
+          return HomePage();
+          },
+          ),
+          );
+        },
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 8.0),
           width: double.infinity,
           child: Text(
             'Simpan',
-            style: TextStyle(color: ColorPalette.primaryColor),
+            style: TextStyle(color: Color(0xFFF57F17)),
             textAlign: TextAlign.center,
           ),
           decoration: BoxDecoration(

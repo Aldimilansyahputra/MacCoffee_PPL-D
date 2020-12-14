@@ -5,12 +5,13 @@ import 'package:maccoffee/admins/reward_view.dart';
 import 'package:maccoffee/admins/trivia_view.dart';
 import 'package:maccoffee/quiz/level_one.dart';
 
-/// This is the main application widget.
+
 class AdminHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Home [ Admin ]",
       home: Scaffold(
         body: MyStatelessWidget(),
@@ -19,7 +20,7 @@ class AdminHomepage extends StatelessWidget {
   }
 }
 
-/// This is the stateless widget that the main application instantiates.
+
 class MyStatelessWidget extends StatelessWidget {
   MyStatelessWidget({Key key}) : super(key: key);
 
@@ -42,9 +43,9 @@ class MyStatelessWidget extends StatelessWidget {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFFFFEB3B),
+                    Color(0xFFFBC02D),
+                    Color(0xFFF57F17),
                   ],
                 ),
               ),
@@ -67,9 +68,9 @@ class MyStatelessWidget extends StatelessWidget {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFFFFEB3B),
+                    Color(0xFFFBC02D),
+                    Color(0xFFF57F17),
                   ],
                 ),
               ),
@@ -91,9 +92,9 @@ class MyStatelessWidget extends StatelessWidget {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFFFFEB3B),
+                    Color(0xFFFBC02D),
+                    Color(0xFFF57F17),
                   ],
                 ),
               ),
@@ -115,9 +116,9 @@ class MyStatelessWidget extends StatelessWidget {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFFFFEB3B),
+                    Color(0xFFFBC02D),
+                    Color(0xFFF57F17),
                   ],
                 ),
               ),

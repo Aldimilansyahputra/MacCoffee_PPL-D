@@ -118,7 +118,7 @@ class _QuizTwo extends State<QuizTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorPalette.primaryColor,
+        backgroundColor: Color(0xFFF57F17),
       ),
 
       body: new ListView(

@@ -16,7 +16,6 @@ void main(){
     initialRoute: "/",
     routes: {
       "/" : (context) => LauncherPage(),
-      LoginPage.routeName : (context) => LoginPage(),
       RegisterPage.routeName : (context) => RegisterPage(),
       EditPage.routeName : (context) => EditPage(),
       HomePage.routeName : (context) => HomePage(),
