@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maccoffee/constants.dart';
-import 'package:maccoffee/quiz/selection_view.dart';
+import 'package:maccoffee/screenslog/selection_view.dart';
 import 'package:maccoffee/screens/home_view.dart';
 import 'package:maccoffee/screens/login_view.dart';
 import 'package:maccoffee/screens/edit_view.dart';
@@ -45,7 +45,7 @@ class HomePageLogin extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (c){
-                    return SelectionPage();
+                    return MyApp();
                   },),);
                 },
               ),

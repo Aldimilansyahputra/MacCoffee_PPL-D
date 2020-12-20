@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maccoffee/admins/home_view.dart';
 import 'package:maccoffee/screens/background.dart';
 import 'package:maccoffee/screens/register_view.dart';
 import 'package:maccoffee/components/already_have_an_account_acheck.dart';
@@ -60,7 +61,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: size.height * 0.03),
                 TextFormField(
                   decoration: const InputDecoration(
-                    hintText: "Your Email",
+                    hintText: "Username",
                   ),
                   onChanged: (e) {
                     email= e;
@@ -77,7 +78,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: size.height * 0.03),
                 RaisedButton(
                   onPressed: () {
-                    if(email=='sudekat' && password =='air') {
+                    if(email=='user' && password =='user') {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -87,7 +88,17 @@ class LoginPage extends StatelessWidget {
                         ),
                       );
                     }
-                    else{
+                    else if(email=='admin' && password =='admin'){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return AdminHomepage();
+                          },
+                        ),
+                      );
+
+                    }else{
                       return _tampilkanalert(context);
                     }
 
